@@ -1,7 +1,10 @@
-import { DashboardContainer } from "./components/DashboardContainer";
+import { MarketplaceContainer } from "./components/MarketplaceContainer";
+
 
 const App = () => {
-  return <DashboardContainer />;
+  return (
+  <MarketplaceContainer />
+  )
 };
 
 export default App
