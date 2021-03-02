@@ -26,8 +26,8 @@ const DashboardContainer = () => {
     // console.log("listingIndex:", listingIndex);
     const listing = hireItemsList[listingIndex];
     // console.log("listing:", listing);
-    setListingEdit(listing);
-    setListingDelete(listing);
+    setHireItemsListEdit(listing);
+    setHireItemsListDelete(listing);
   };
 
   const handleAddListingFormSubmit = (name, color, size, amount, cost) => {
@@ -92,8 +92,8 @@ const DashboardContainer = () => {
       .then((response) => {
         return response.json();
       })
-      .then((listingData) => {
-        setHireItemsList(listingData.data);
+      .then((response) => {
+        setHireItemsList(response);
       });
   }, [hireItemsList]);
 

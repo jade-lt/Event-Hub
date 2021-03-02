@@ -4,7 +4,7 @@ const hireItemSchema = mongoose.Schema({
   name: String,
   color: String,
   size: String,
-  namount: Number,
+  amount: Number,
   cost: String,
   // imgUrl: String,
   // costToPurchase: String,

@@ -3,13 +3,13 @@ import React, { useEffect, useState } from "react";
 
 const DeleteListingForm = (props) => {
 
-    const [formState, setFormState] = useState({
-        name: '',
-        color: '',
-        size: '',
-        amount: '',
-        cost: '',
-      })
+  const [formState, setFormState] = useState({
+    name: "",
+    color: "",
+    size: "",
+    amount: "",
+    cost: "",
+  });
 
       useEffect(() => {
         setFormState(props.listing)
@@ -37,7 +37,7 @@ const DeleteListingForm = (props) => {
               Name
               <input
                 name="name"
-                value={formState.name}
+                // value={formState.name}
                 onChange={handleChange}
               ></input>
             </label>
@@ -45,7 +45,7 @@ const DeleteListingForm = (props) => {
               Color
               <input
                 name="color"
-                value={formState.color}
+                // value={formState.color}
                 onChange={handleChange}
               ></input>
             </label>
@@ -53,7 +53,7 @@ const DeleteListingForm = (props) => {
               Size
               <input
                 name="size"
-                value={formState.size}
+                // value={formState.size}
                 onChange={handleChange}
               ></input>
             </label>
@@ -61,7 +61,7 @@ const DeleteListingForm = (props) => {
               Amount
               <input
                 name="amount"
-                value={formState.amount}
+                // value={formState.amount}
                 onChange={handleChange}
               ></input>
             </label>
@@ -69,7 +69,7 @@ const DeleteListingForm = (props) => {
               Cost
               <input
                 name="cost"
-                value={formState.cost}
+                // value={formState.cost}
                 onChange={handleChange}
               ></input>
             </label>
