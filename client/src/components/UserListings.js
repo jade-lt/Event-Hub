@@ -1,23 +1,19 @@
 import React from "react";
 
 const UserListings = (props) => {
-
-    
-
     return (
-        <div>
-            <h1>This is the user listings file</h1>
-            <ul>
-          {props.listingItems.map((el) => (
-            <li >
-              Name: {el.name} // Color: {el.itemColor} // Size: {el.dimensions}
-            </li>
-          ))}
-        </ul>
-        </div>
-        
-      );
-}
+      <ul>
+        {props.listings.map((el, index) => (
+        <li key={index} onClick={() => props.handleClick(index)}>
+            Name: {el.name} // Color: {el.color} // Size: {el.size} // Amount: {el.amount} // Cost: {el.cost}
+          </li>
+        ))}
+      </ul>
+    );
+  };
 
 export { UserListings };
+
+
+
 

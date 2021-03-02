@@ -26,7 +26,7 @@ router.post("/new-hire-item", (req, res) => {
   });
 });
 
-router.patch("/update-item/:id", (req, res) => {
+router.put("/update-item/:id", (req, res) => {
   HireItemModel.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     upsert: true,

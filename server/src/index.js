@@ -10,7 +10,7 @@ const userRouter = require("./routes/userRoutes");
 
 mongoose.connect("mongodb://localhost/eventMarketplace", {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
+  // useUnifiedTopology: true,
   useCreateIndex: true,
   useFindAndModify: false,
 });
