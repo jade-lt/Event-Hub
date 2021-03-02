@@ -13,3 +13,4 @@ const hireItemSchema = mongoose.Schema({
 });
 
 module.exports = mongoose.model("HireItem", hireItemSchema);
+

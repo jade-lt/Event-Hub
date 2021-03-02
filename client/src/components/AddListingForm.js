@@ -1,9 +1,9 @@
 import React from "react";
 
-const EditListingForm = () => {
+const AddListingForm = () => {
     return (
         <div>
-            <h3>Edit a Listing</h3>
+            <h3>Add a Listing</h3>
             <form>
                 <label>
                     Name
@@ -25,11 +25,12 @@ const EditListingForm = () => {
                     Cost
                     <input name="cost"></input>
                 </label>
-                <button type="submit">Edit Item</button>
+                <button type="submit">Add Listing</button>
+
             </form>
         </div>
         
     )
 }
 
-export { EditListingForm };
+export { AddListingForm };

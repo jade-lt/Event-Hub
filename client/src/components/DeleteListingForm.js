@@ -1,9 +1,9 @@
 import React from "react";
 
-const EditListingForm = () => {
+const DeleteListingForm = () => {
     return (
         <div>
-            <h3>Edit a Listing</h3>
+            <h3>Delete a Listing</h3>
             <form>
                 <label>
                     Name
@@ -25,11 +25,10 @@ const EditListingForm = () => {
                     Cost
                     <input name="cost"></input>
                 </label>
-                <button type="submit">Edit Item</button>
             </form>
         </div>
         
     )
 }
 
-export { EditListingForm };
+export { DeleteListingForm };

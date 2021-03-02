@@ -1,16 +1,23 @@
 import React from "react";
 
-const UserListings = () => {
+const UserListings = (props) => {
+
+    
 
     return (
         <div>
-             <h3>My Listings</h3>
-        <ul>
-            <li></li>
+            <h1>This is the user listings file</h1>
+            <ul>
+          {props.listingItems.map((el) => (
+            <li >
+              Name: {el.name} // Color: {el.itemColor} // Size: {el.dimensions}
+            </li>
+          ))}
         </ul>
         </div>
-       
-    )
+        
+      );
 }
 
 export { UserListings };
+

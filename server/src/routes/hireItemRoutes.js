@@ -7,6 +7,17 @@ router.get("/", (req, res) => res.send("this is the hire items router"));
 
 router.get("/test", (req, res) => res.send("test OK"));
 
+router.get("/my-items", (req, res) => {
+  HireItemModel.find()
+  .populate("categoryId")
+  .then((hireitems) => {
+    res.send(hireitems);
+  })
+  .catch(() => {
+    res.status(500).send("unable to query hire items");
+  });
+});
+
 router.post("/new-hire-item", (req, res) => {
   const reqBody = req.body;
   HireItemModel.create(reqBody).then((data) => {
