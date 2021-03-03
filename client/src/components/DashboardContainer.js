@@ -101,9 +101,9 @@ const DashboardContainer = () => {
     <div>
       <h1>Welcome Back!</h1>
       <UserListings listings={hireItemsList} handleClick={handleListingClick}/>
-      <AddListingForm submit={handleAddListingFormSubmit} listing={hireItemsListEdit} />
-      <EditListingForm submit={handleEditListingFormSubmit} listing={hireItemsListDelete}/>
-      <DeleteListingForm submit={handleDeleteListingFormSubmit} />
+      <AddListingForm submit={handleAddListingFormSubmit} />
+      <EditListingForm submit={handleEditListingFormSubmit} listing={hireItemsListEdit} />
+      <DeleteListingForm submit={handleDeleteListingFormSubmit} listing={hireItemsListDelete}/>
     </div>
   );
 };
