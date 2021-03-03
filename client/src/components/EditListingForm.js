@@ -8,6 +8,7 @@ const EditListingForm = (props) => {
         size: "",
         amount: "",
         cost: "",
+        image: "",
       });
 
       useEffect(() => {
@@ -69,6 +70,14 @@ const EditListingForm = (props) => {
                 onChange={handleChange}
               ></input>
             </label>
+            <label>
+          Image
+          <input
+            name="image"
+            value={formState.image}
+            onChange={handleChange}
+          ></input>
+        </label>
             <button type="submit">Edit Listing</button>
           </form>
         </div>

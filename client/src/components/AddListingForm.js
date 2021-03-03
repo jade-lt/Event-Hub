@@ -7,6 +7,7 @@ const AddListingForm = (props) => {
     size: "",
     amount: "",
     cost: "",
+    image: ""
   });
 
   const handleChange = (e) => {
@@ -22,7 +23,8 @@ const AddListingForm = (props) => {
       formState.color,
       formState.size,
       formState.amount,
-      formState.cost
+      formState.cost,
+      formState.image
     );
   };
 
@@ -67,6 +69,14 @@ const AddListingForm = (props) => {
           <input
             name="cost"
             value={formState.cost}
+            onChange={handleChange}
+          ></input>
+        </label>
+        <label>
+          Image
+          <input
+            name="image"
+            value={formState.image}
             onChange={handleChange}
           ></input>
         </label>

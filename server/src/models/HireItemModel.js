@@ -6,7 +6,7 @@ const hireItemSchema = mongoose.Schema({
   size: String,
   amount: Number,
   cost: String,
-  // imgUrl: String,
+  image: String,
   // costToPurchase: String,
   // supplier: String
 });
