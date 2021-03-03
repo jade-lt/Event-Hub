@@ -3,9 +3,9 @@ import { AddListingForm } from "./AddListingForm";
 import { EditListingForm } from "./EditListingForm";
 import { DeleteListingForm } from "./DeleteListingForm";
 import { UserListings } from "./UserListings";
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 
 const DashboardContainer = () => {
-
   const [hireItemsList, setHireItemsList] = useState([]);
   const [hireItemsListEdit, setHireItemsListEdit] = useState({
     name: "",
@@ -29,7 +29,13 @@ const DashboardContainer = () => {
   };
 
   const handleAddListingFormSubmit = (name, color, size, amount, cost) => {
-    const newListing = { name: name, color: color, size: size, amount: amount, cost: cost };
+    const newListing = {
+      name: name,
+      color: color,
+      size: size,
+      amount: amount,
+      cost: cost,
+    };
 
     const newListings = [...hireItemsList];
     newListings.push(newListing);
@@ -41,10 +47,8 @@ const DashboardContainer = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newListing),
-    }).then((response) => {
-    });
-  }
-
+    }).then((response) => {});
+  };
 
   const handleEditListingFormSubmit = (listing) => {
     const foundListing = hireItemsList.findIndex((listingEl) => {
@@ -60,8 +64,8 @@ const DashboardContainer = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(listing),
-    })
-  }
+    });
+  };
 
   const handleDeleteListingFormSubmit = (listing) => {
     const foundListing = hireItemsList.findIndex((listingEl) => {
@@ -75,9 +79,8 @@ const DashboardContainer = () => {
       headers: {
         "Content-Type": "application/json",
       },
-    })
+    });
   };
-
 
   useEffect(() => {
     fetch("http://localhost:9000/api/hire-items/my-items", {
@@ -95,13 +98,36 @@ const DashboardContainer = () => {
   }, [hireItemsList]);
 
   return (
-    <div>
-      <h1>Welcome Back!</h1>
-      <UserListings listings={hireItemsList} handleClick={handleListingClick}/>
-      <AddListingForm submit={handleAddListingFormSubmit} />
-      <EditListingForm submit={handleEditListingFormSubmit} listing={hireItemsListEdit} />
-      <DeleteListingForm submit={handleDeleteListingFormSubmit} listing={hireItemsListDelete}/>
-    </div>
+    <Router>
+      <div>
+        <h1>Welcome Back!</h1>
+        <UserListings
+          listings={hireItemsList}
+          handleClick={handleListingClick}
+        />
+
+        <Link to="/dashboard/listing/add">Add a Listing</Link>
+        <Link to="/dashboard/listing/edit">Edit a Listing</Link>
+        <Link to="/dashboard/listing/delete">Delete a Listing</Link>
+        <Switch>
+          <Route path="/dashboard/listing/add">
+            <AddListingForm submit={handleAddListingFormSubmit} />
+          </Route>
+          <Route path="/dashboard/listing/edit">
+            <EditListingForm
+              submit={handleEditListingFormSubmit}
+              listing={hireItemsListEdit}
+            />
+          </Route>
+          <Route path="/dashboard/listing/delete">
+            <DeleteListingForm
+              submit={handleDeleteListingFormSubmit}
+              listing={hireItemsListDelete}
+            />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 };
 
