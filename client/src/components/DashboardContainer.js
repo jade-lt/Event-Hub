@@ -23,9 +23,7 @@ const DashboardContainer = () => {
   });
 
   const handleListingClick = (listingIndex) => {
-    // console.log("listingIndex:", listingIndex);
     const listing = hireItemsList[listingIndex];
-    // console.log("listing:", listing);
     setHireItemsListEdit(listing);
     setHireItemsListDelete(listing);
   };
@@ -44,7 +42,6 @@ const DashboardContainer = () => {
       },
       body: JSON.stringify(newListing),
     }).then((response) => {
-      // console.log("response:", response);
     });
   }
 

@@ -17,7 +17,6 @@ const AddListingForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("handleSubmit");
     props.submit(
       formState.name,
       formState.color,
