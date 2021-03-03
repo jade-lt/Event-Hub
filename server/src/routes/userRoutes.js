@@ -14,7 +14,6 @@ router.get("/new-session", (req, res) => {
 
 router.get("/test-session", (req, res) => {
     res.send(req.session.testProperty);
-    console.log("OK")
 });
 
 router.get("/expire-session", (req, res) => {
@@ -25,7 +24,6 @@ router.post("/register", (req, res) => {
     const body = req.body;
     const passwordHash = bcrypt.hashSync(body.password, 10);
     const user = { userName: body.userName, password: passwordHash };
-    console.log("user registered", body, passwordHash, user);
     UserModel.create(user).then((userData) => {
         res.send(userData);
     });

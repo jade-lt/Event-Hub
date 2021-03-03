@@ -1,24 +1,30 @@
 import React from "react";
 import { DashboardContainer } from "./DashboardContainer";
-// import { UserListings } from "./UserListings";
 import { UserLogin } from "./UserLogin";
 import { UserRegister } from "./UserRegister";
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 
 const MarketplaceContainer = () => {
-
-    
-
-    
-
     return (
-        <div>
+        <Router>
+<div>
             <h1 class="header-text">The Event Marketplace</h1>
-            <UserLogin />
-            <UserRegister />
-            <DashboardContainer />
-            
-        </div>
-        
+<Link to="/login">Login</Link>
+<Link to="/register">Register</Link>
+<Link to="/dashboard">Dashboard</Link>
+<Switch>
+  <Route path="/login">
+  <UserLogin />
+  </Route>
+  <Route path="/register">
+  <UserRegister />
+  </Route>
+  <Route path="/dashboard">
+  <DashboardContainer />
+  </Route>
+</Switch>
+</div>
+        </Router>
     )
 };
 
