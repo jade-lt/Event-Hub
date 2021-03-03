@@ -13,7 +13,6 @@ const DeleteListingForm = (props) => {
 
       useEffect(() => {
         setFormState(props.listing)
-        console.log('useEffect delete')
       }, [props.listing]);
 
 
@@ -24,7 +23,6 @@ const DeleteListingForm = (props) => {
       };
     
       const handleSubmit = (e) => {
-        console.log("handleSubmit");
         props.submit(formState);
       };
 

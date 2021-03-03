@@ -21,7 +21,6 @@ router.get("/my-items", (req, res) => {
 router.post("/new-hire-item", (req, res) => {
   const reqBody = req.body;
   HireItemModel.create(reqBody).then((data) => {
-    console.log(data);
     res.send("item added successfully");
   });
 });
@@ -32,11 +31,9 @@ router.put("/update-item/:id", (req, res) => {
     upsert: true,
   })
     .then((data) => {
-      console.log("item updated successfully");
       res.send(data);
     })
     .catch(() => {
-      console.log("something went wrong");
       res.status(404).send("this item doesn't exist");
     });
 });
@@ -44,11 +41,9 @@ router.put("/update-item/:id", (req, res) => {
 router.delete("/delete-item/:id", (req, res) => {
     HireItemModel.findByIdAndDelete(req.params.id)
     .then((data) => {
-        console.log("item deleted successfully");
         res.send(data);
     })
     .catch(() => {
-        console.log("something went wrong");
         res.status(404).send("this item doesn't exist");
     });
 });

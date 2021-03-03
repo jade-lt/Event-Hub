@@ -12,7 +12,6 @@ const EditListingForm = (props) => {
 
       useEffect(() => {
         setFormState(props.listing)
-        console.log('useEffect edit')
       }, [props.listing]);
 
       const handleChange = (e) => {
@@ -23,7 +22,6 @@ const EditListingForm = (props) => {
 
       const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("handleSubmit");
         props.submit(formState);
       };
 
