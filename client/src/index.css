@@ -38,21 +38,23 @@
 #new-user-div {
   width: 50%;
   margin: 2%
-}
+} */
 
 .user-items-list {
+  width: 30%;
   margin: 1%;
   /* border-style: ridge; */
-  /* border-radius: 6%;
+  border-radius: 6%;
   text-align: left;
 }
 
+/*
 .section-heading {
   margin-bottom: 4%;
   text-align: center;
 } */ 
 
 .item-img {
-  max-width: 30%;
+  max-width: 100%;
   border-radius: 5%;
 }
