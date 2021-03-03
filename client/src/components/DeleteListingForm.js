@@ -39,38 +39,6 @@ const DeleteListingForm = (props) => {
                 onChange={handleChange}
               ></input>
             </label>
-            <label>
-              Color
-              <input
-                name="color"
-                value={formState.color}
-                onChange={handleChange}
-              ></input>
-            </label>
-            <label>
-              Size
-              <input
-                name="size"
-                value={formState.size}
-                onChange={handleChange}
-              ></input>
-            </label>
-            <label>
-              Amount
-              <input
-                name="amount"
-                value={formState.amount}
-                onChange={handleChange}
-              ></input>
-            </label>
-            <label>
-              Cost
-              <input
-                name="cost"
-                value={formState.cost}
-                onChange={handleChange}
-              ></input>
-            </label>
             <button type="submit">Delete Listing</button>
           </form>
         </div>

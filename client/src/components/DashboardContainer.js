@@ -13,6 +13,7 @@ const DashboardContainer = () => {
     size: "",
     amount: "",
     cost: "",
+    image: "",
   });
   const [hireItemsListDelete, setHireItemsListDelete] = useState({
     name: "",
@@ -20,6 +21,7 @@ const DashboardContainer = () => {
     size: "",
     amount: "",
     cost: "",
+    image: "",
   });
 
   const handleListingClick = (listingIndex) => {
@@ -28,13 +30,14 @@ const DashboardContainer = () => {
     setHireItemsListDelete(listing);
   };
 
-  const handleAddListingFormSubmit = (name, color, size, amount, cost) => {
+  const handleAddListingFormSubmit = (name, color, size, amount, cost, image) => {
     const newListing = {
       name: name,
       color: color,
       size: size,
       amount: amount,
       cost: cost,
+      imgUrl: image,
     };
 
     const newListings = [...hireItemsList];
