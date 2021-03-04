@@ -73,3 +73,11 @@ ul {
   max-width: 100%;
   border-radius: 5%;
 }
+
+.listing-name {
+  text-align: center;
+}
+
+.listing-info {
+  margin: 2% 0 0 6%;
+}
