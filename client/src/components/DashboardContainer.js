@@ -103,7 +103,7 @@ const DashboardContainer = () => {
   return (
     <Router>
       <div>
-        <h1>Welcome Back!</h1>
+        {/* <h1>Welcome Back!</h1> */}
         <UserListings
           listings={hireItemsList}
           handleClick={handleListingClick}

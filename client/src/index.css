@@ -40,7 +40,22 @@
   margin: 2%
 } */
 
+#listings-container {
+  display: inline-grid;
+  
+}
+
+ul {
+  list-style-type: none;
+}
+
+.sub-heading{
+  text-align: center;
+}
+
+
 .user-items-list {
+  float: left;
   width: 30%;
   margin: 1%;
   /* border-style: ridge; */
