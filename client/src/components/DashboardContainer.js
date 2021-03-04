@@ -109,9 +109,15 @@ const DashboardContainer = () => {
           handleClick={handleListingClick}
         />
 
-        <Link to="/dashboard/listing/add">Add a Listing</Link>
-        <Link to="/dashboard/listing/edit">Edit a Listing</Link>
-        <Link to="/dashboard/listing/delete">Delete a Listing</Link>
+        <Link to="/dashboard/listing/add">
+        <button type="button">Add a Listing</button>
+        </Link>
+        <Link to="/dashboard/listing/edit">
+        <button type="button">Edit a Listing</button>
+        </Link>
+        <Link to="/dashboard/listing/delete">
+        <button type="button">Delete a Listing</button>
+        </Link>
         <Switch>
           <Route path="/dashboard/listing/add">
             <AddListingForm submit={handleAddListingFormSubmit} />

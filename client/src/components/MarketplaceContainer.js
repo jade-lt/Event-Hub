@@ -7,13 +7,21 @@ import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 const MarketplaceContainer = () => {
   return (
     <div>
-      <h1 class="header-text">The Event Marketplace</h1>
+      <h1 className="header-text">The Event Marketplace</h1>
 
       <Router>
         <div>
-          <Link to="/login">Login</Link>
-          <Link to="/register">Register</Link>
-          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/login">
+            <button type="button">Login</button>
+            
+            </Link>
+          <Link to="/register">
+          <button type="button">Register</button>
+
+          </Link>
+          <Link to="/dashboard">
+          <button type="button">Dashboard</button>
+          </Link>
           <Switch>
             <Route path="/login">
               <UserLogin />
