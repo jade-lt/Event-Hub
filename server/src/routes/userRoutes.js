@@ -41,6 +41,7 @@ router.post("/login", (req, res) => {
                     id: userData._id,
                 };
                 res.send("successfully logged in");
+                res.redirect("/dashboard")
             } else {
                 res.status(401).send("username or password is incorrect");
             }
