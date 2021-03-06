@@ -20,17 +20,28 @@ router.get("/expire-session", (req, res) => {
     req.session.destroy(() => res.send("the session has expired"));
 });
 
-router.post("/register", (req, res) => {
+router.get("/all-users", (req, res) => {
+    UserModel.find()
+    .populate("categoryId")
+    .then((users) => {
+      res.send(users);
+    })
+    .catch(() => {
+      res.status(500).send("unable to query hire items");
+    });
+  });
+
+router.post("/register", async (req, res) => {
     const body = req.body;
     const passwordHash = bcrypt.hashSync(body.password, 10);
-    const user = { userName: body.userName, password: passwordHash };
+    const user = { username: body.username, password: passwordHash };
     UserModel.create(user).then((userData) => {
         res.send(userData);
     });
 });
 
 router.post("/login", (req, res) => {
-    UserModel.findOne({ userName: req.body.userName }).then((userData) => {
+    UserModel.findOne({ username: req.body.username }).then((userData) => {
         if(userData) {
             const checkHashPassword = bcrypt.compareSync(
                 req.body.password,
@@ -41,15 +52,19 @@ router.post("/login", (req, res) => {
                     id: userData._id,
                 };
                 res.send("successfully logged in");
-                res.redirect("/dashboard")
+                // res.redirect("/register")
             } else {
+                console.log("not working ??")
                 res.status(401).send("username or password is incorrect");
             }
         } else {
+            console.log("no user blah blah blah ???")
             res.status(401).send("username or password is incorrect");
         }
     });
 });
+
+
 
 router.get("/logout", (req, res) => {
     req.session.loggedIn = false;
