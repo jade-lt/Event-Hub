@@ -52,11 +52,13 @@ router.post("/login", (req, res) => {
                     id: userData._id,
                 };
                 res.send("successfully logged in");
-                res.redirect("/dashboard")
+                // res.redirect("/register")
             } else {
+                console.log("not working ??")
                 res.status(401).send("username or password is incorrect");
             }
         } else {
+            console.log("no user blah blah blah ???")
             res.status(401).send("username or password is incorrect");
         }
     });

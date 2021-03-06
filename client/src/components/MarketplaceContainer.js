@@ -4,11 +4,39 @@ import { UserLogin } from "./UserLogin";
 import { AddUserForm } from "./UserRegister";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 
-
-
 const MarketplaceContainer = () => {
 
   const [users, setUsers] = useState([]);
+  // const [userData, setUserData] = useState({
+  //   username: "",
+  //   password: "",
+  // })
+  // const [username, setUsername] = useState("");
+  // const [password, setPassword] = useState("")
+
+
+  // const handleUserLoginFormSubmit = (username, password) => {
+  //   console.log("user login button was clicked")
+  //    setUserData = {
+  //     username: username.value,
+  //     password: password.value,
+  //   };
+    
+  //   // const testUsers = [...users];
+  //   // testUsers.push(userLogin);
+  //   // setUsers(testUsers);
+
+  //   fetch("http://localhost:9000/api/user/login", {
+  //     method: "POST",
+  //     headers: {
+  //       // "url": "/api/user/login",
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(userData),
+  //   })
+  // };
+
+
 
   const handleAddUserFormSubmit = (username, password) => {
     console.log("the add user button was clicked")
@@ -30,6 +58,8 @@ const MarketplaceContainer = () => {
   });
 
 };
+
+
   return (
     <div>
       <h1 className="header-text">The Event Marketplace</h1>

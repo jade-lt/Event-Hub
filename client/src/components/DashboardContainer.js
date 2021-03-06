@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { AddListingForm } from "./AddListingForm";
+import { AddListingForm } from "./Popup";
 import { EditListingForm } from "./EditListingForm";
 import { DeleteListingForm } from "./DeleteListingForm";
 import { UserListings } from "./UserListings";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+// import { PopupExample } from "./Popup";
 
 const DashboardContainer = () => {
   const [hireItemsList, setHireItemsList] = useState([]);
@@ -103,7 +104,7 @@ const DashboardContainer = () => {
   return (
     <Router>
       <div>
-        {/* <h1>Welcome Back!</h1> */}
+        <h1>Welcome Back!</h1>
         <UserListings
           listings={hireItemsList}
           handleClick={handleListingClick}
@@ -142,3 +143,4 @@ const DashboardContainer = () => {
 };
 
 export { DashboardContainer };
+
