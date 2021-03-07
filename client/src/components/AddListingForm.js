@@ -34,7 +34,7 @@ const AddListingForm = (props) => {
 
   return (
     <Popup trigger={
-      <Button type ="submit" variant="outline-info" className="mr-2">Add Listing</Button>
+      <Button type ="submit" variant="outline-info" className="mr-2">Add a Listing</Button>
     } position="right center">
       
     <div>
@@ -89,7 +89,7 @@ const AddListingForm = (props) => {
           ></input>
         </label>
         {/* <button type="submit">Add Listing</button> */}
-        <Button type ="submit" variant="info" className="mr-2">Add Listing</Button>
+        <Button type ="submit" variant="outline-info" className="mr-2">Add Listing</Button>
 
       </form>
     </div>

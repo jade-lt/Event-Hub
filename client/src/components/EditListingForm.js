@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Popup from "reactjs-popup";
+import { Button } from "react-bootstrap";
+
 
 const EditListingForm = (props) => {
 
@@ -28,8 +30,11 @@ const EditListingForm = (props) => {
       };
 
       return (
-    <Popup trigger={<button>Change a Listing</button>} position="right center">
-        <div>
+    <Popup trigger={
+      <Button type ="submit" variant="outline-info" className="mr-2">Edit a Listing</Button>
+    } position="right center">
+      
+    <div>
           <h3>Edit a Listing</h3>
           <form onSubmit={handleSubmit}>
             <label>
@@ -80,7 +85,8 @@ const EditListingForm = (props) => {
             onChange={handleChange}
           ></input>
         </label>
-            <button type="submit">Edit Listing</button>
+        <Button type ="submit" variant="outline-info" className="mr-2">Edit Listing</Button>
+
           </form>
         </div>
         </Popup>

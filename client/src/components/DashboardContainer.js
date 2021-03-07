@@ -111,19 +111,19 @@ const DashboardContainer = () => {
         <h1>Welcome Back!</h1>
         <Link to="/dashboard/listing/add">
         {/* <button type="button">Add a Listing</button> */}
-        <Button variant="info" className="mr-2">Add a Listing</Button>
+        <Button variant="outline-info" className="mr-2">Add a Listing</Button>
 
         
         </Link>
         <Link to="/dashboard/listing/edit">
         {/* <button type="button">Edit a Listing</button> */}
-        <Button variant="info" className="mr-2">Edit a Listing</Button>
+        <Button variant="outline-info" className="mr-2">Edit a Listing</Button>
 
         
         </Link>
         <Link to="/dashboard/listing/delete">
         {/* <button type="button">Delete a Listing</button> */}
-        <Button variant="info" className="mr-2">Delete a Listing</Button>
+        <Button variant="outline-info" className="mr-2">Delete a Listing</Button>
 
         </Link>
         
