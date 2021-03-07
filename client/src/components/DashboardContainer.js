@@ -4,6 +4,8 @@ import { EditListingForm } from "./EditListingForm";
 import { DeleteListingForm } from "./DeleteListingForm";
 import { UserListings } from "./UserListings";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import { Button } from "react-bootstrap";
+
 // import { MarketplaceContainer } from "./MarketplaceContainer";
 
 // import { PopupExample } from "./Popup";
@@ -108,13 +110,21 @@ const DashboardContainer = () => {
       <div>
         <h1>Welcome Back!</h1>
         <Link to="/dashboard/listing/add">
-        <button type="button">Add a Listing</button>
+        {/* <button type="button">Add a Listing</button> */}
+        <Button variant="info" className="mr-2">Add a Listing</Button>
+
+        
         </Link>
         <Link to="/dashboard/listing/edit">
-        <button type="button">Edit a Listing</button>
+        {/* <button type="button">Edit a Listing</button> */}
+        <Button variant="info" className="mr-2">Edit a Listing</Button>
+
+        
         </Link>
         <Link to="/dashboard/listing/delete">
-        <button type="button">Delete a Listing</button>
+        {/* <button type="button">Delete a Listing</button> */}
+        <Button variant="info" className="mr-2">Delete a Listing</Button>
+
         </Link>
         
         <UserListings

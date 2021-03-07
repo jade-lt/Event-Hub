@@ -3,6 +3,7 @@ import { DashboardContainer } from "./DashboardContainer";
 import { UserLogin } from "./UserLogin";
 import { AddUserForm } from "./UserRegister";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const MarketplaceContainer = () => {
 
@@ -68,13 +69,18 @@ const MarketplaceContainer = () => {
         <div>
         
           <Link to="/login">
-            <button type="button">Login</button>
+            {/* <button type="button">Login</button> */}
+            <Button variant="info" className="mr-2">Login</Button>
             </Link>
           <Link to="/register">
-          <button type="button">Register</button>
+          {/* <button type="button">Register</button> */}
+          <Button variant="info" className="mr-2">Register</Button>
+
           </Link>
           <Link to="dashboard">
-          <button type="button">Dashboard</button>
+          {/* <button type="button">Dashboard</button> */}
+          <Button variant="info" className="mr-2">Dashboard</Button>
+
           </Link>
           <Switch>
             <Route path="/login">
