@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Popup from "reactjs-popup";
 
 const EditListingForm = (props) => {
 
@@ -27,6 +28,7 @@ const EditListingForm = (props) => {
       };
 
       return (
+    <Popup trigger={<button>Change a Listing</button>} position="right center">
         <div>
           <h3>Edit a Listing</h3>
           <form onSubmit={handleSubmit}>
@@ -81,6 +83,7 @@ const EditListingForm = (props) => {
             <button type="submit">Edit Listing</button>
           </form>
         </div>
+        </Popup>
       );
 }
 
