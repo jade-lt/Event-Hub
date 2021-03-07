@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import Popup from "reactjs-popup";
 import 'reactjs-popup/dist/index.css';
+import { Button } from "react-bootstrap";
+
 
 const AddListingForm = (props) => {
   const [formState, setFormState] = useState({
@@ -31,7 +33,10 @@ const AddListingForm = (props) => {
   };
 
   return (
-    <Popup trigger={<button>Add New Listing</button>} position="right center">
+    <Popup trigger={
+      <Button type ="submit" variant="outline-info" className="mr-2">Add Listing</Button>
+    } position="right center">
+      
     <div>
       <h3>Add a Listing</h3>
       <form onSubmit={handleSubmit}>
@@ -83,7 +88,9 @@ const AddListingForm = (props) => {
             onChange={handleChange}
           ></input>
         </label>
-        <button type="submit">Add Listing</button>
+        {/* <button type="submit">Add Listing</button> */}
+        <Button type ="submit" variant="info" className="mr-2">Add Listing</Button>
+
       </form>
     </div>
     </Popup>
