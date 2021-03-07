@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Popup from "reactjs-popup";
+
 
 
 const DeleteListingForm = (props) => {
@@ -28,6 +30,8 @@ const DeleteListingForm = (props) => {
 
 
       return (
+    <Popup trigger={<button>Delete this Listing</button>} position="right center">
+        
         <div>
           <h3>Delete a Listing</h3>
           <form onSubmit={handleSubmit}>
@@ -42,6 +46,7 @@ const DeleteListingForm = (props) => {
             <button type="submit">Delete Listing</button>
           </form>
         </div>
+        </Popup>
       );
 }
 

@@ -1,9 +1,6 @@
-import React, { useState } from "react";
-// import { PopupExample } from "./Popup"
-
-
-
-  
+import React, { useState } from "react"
+import Popup from "reactjs-popup";
+import 'reactjs-popup/dist/index.css';
 
 const AddListingForm = (props) => {
   const [formState, setFormState] = useState({
@@ -34,6 +31,7 @@ const AddListingForm = (props) => {
   };
 
   return (
+    <Popup trigger={<button>Add New Listing</button>} position="right center">
     <div>
       <h3>Add a Listing</h3>
       <form onSubmit={handleSubmit}>
@@ -88,7 +86,8 @@ const AddListingForm = (props) => {
         <button type="submit">Add Listing</button>
       </form>
     </div>
+    </Popup>
   );
 };
 
-export { AddListingForm };
+export { AddListingForm }

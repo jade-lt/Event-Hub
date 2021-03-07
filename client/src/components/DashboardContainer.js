@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { AddListingForm } from "./Popup";
+import { AddListingForm } from "./AddListingForm";
 import { EditListingForm } from "./EditListingForm";
 import { DeleteListingForm } from "./DeleteListingForm";
 import { UserListings } from "./UserListings";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+// import { MarketplaceContainer } from "./MarketplaceContainer";
+
 // import { PopupExample } from "./Popup";
 
 const DashboardContainer = () => {
@@ -105,11 +107,6 @@ const DashboardContainer = () => {
     <Router>
       <div>
         <h1>Welcome Back!</h1>
-        <UserListings
-          listings={hireItemsList}
-          handleClick={handleListingClick}
-        />
-
         <Link to="/dashboard/listing/add">
         <button type="button">Add a Listing</button>
         </Link>
@@ -119,6 +116,11 @@ const DashboardContainer = () => {
         <Link to="/dashboard/listing/delete">
         <button type="button">Delete a Listing</button>
         </Link>
+        
+        <UserListings
+          listings={hireItemsList}
+          handleClick={handleListingClick}
+        />
        
         <Switch>
           <Route path="/dashboard/listing/add">
@@ -136,6 +138,9 @@ const DashboardContainer = () => {
               listing={hireItemsListDelete}
             />
           </Route>
+          {/* <Route path="/">
+          <MarketplaceContainer />
+          </Route> */}
         </Switch>
       </div>
     </Router>
