@@ -3,13 +3,13 @@ import React from "react";
 
 const UserListings = (props) => {
     return (
-      <div id="listings-container">
-        <h2 className="sub-heading">My Listings</h2>
+      <div id="listings-container" >
+      <h3 id="my-listings-heading">My Listings</h3>
       <ul>
         {props.listings.map((el, index) => (
           <div className="user-items-list">
         <li key={index} onClick={() => props.handleClick(index)}>
-        <h3 className="listing-name">{el.name}</h3><br />
+        <h5 className="listing-name">{el.name}</h5><br />
           <img className="item-img"src={el.image} alt=""></img>
           <div className="listing-info">
              Color: {el.color}<br />
