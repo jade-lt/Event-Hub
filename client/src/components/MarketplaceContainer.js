@@ -70,16 +70,16 @@ const MarketplaceContainer = () => {
         
           <Link to="/login">
             {/* <button type="button">Login</button> */}
-            <Button variant="info" className="mr-2">Login</Button>
+            <Button variant="outline-info" className="mr-2">Login</Button>
             </Link>
           <Link to="/register">
           {/* <button type="button">Register</button> */}
-          <Button variant="info" className="mr-2">Register</Button>
+          <Button variant="outline-info" className="mr-2">Register</Button>
 
           </Link>
           <Link to="dashboard">
           {/* <button type="button">Dashboard</button> */}
-          <Button variant="info" className="mr-2">Dashboard</Button>
+          <Button variant="outline-info" className="mr-2">Dashboard</Button>
 
           </Link>
           <Switch>

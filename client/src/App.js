@@ -11,7 +11,7 @@ const App = () => {
       <div>
       <Link to="/">
         {/* <button type="button">Home</button> */}
-        <Button variant="info" className="mr-2">Home</Button>
+        <Button variant="outline-info" className="mr-2">Home</Button>
 
         </Link>
           <Switch>

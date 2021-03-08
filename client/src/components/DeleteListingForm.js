@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Popup from "reactjs-popup";
+import { Button } from "react-bootstrap";
+
 
 
 
@@ -30,7 +32,8 @@ const DeleteListingForm = (props) => {
 
 
       return (
-    <Popup trigger={<button>Delete this Listing</button>} position="right center">
+    <Popup trigger={<Button type ="submit" variant="outline-info" className="mr-2">Delete a Listing</Button>
+  } position="right center">
         
         <div>
           <h3>Delete a Listing</h3>
@@ -43,7 +46,8 @@ const DeleteListingForm = (props) => {
                 onChange={handleChange}
               ></input>
             </label>
-            <button type="submit">Delete Listing</button>
+            <Button type ="submit" variant="outline-info" className="mr-2">Delete Listing</Button>
+
           </form>
         </div>
         </Popup>
