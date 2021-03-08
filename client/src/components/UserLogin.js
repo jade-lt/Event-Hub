@@ -26,9 +26,10 @@ const UserLogin = (props) => {
       <div className="row">
         <div id="user-login" className="col-sm">
           <form >
-            <h4 className="section-heading">Login</h4>
+            <h3 className="section-heading">Login</h3>
             <div className="form-group">
-              <label htmlFor="username">Username</label>
+              <label htmlFor="username">
+                Username
               <input
                 type="text"
                 className="form-control"
@@ -37,9 +38,11 @@ const UserLogin = (props) => {
                 // value={formState.username}
                 // onChange={handleChange}
               ></input>
+              </label>
             </div>
             <div className="form-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">
+                Password
               <input
                 type="password"
                 className="form-control"
@@ -48,6 +51,7 @@ const UserLogin = (props) => {
                 // value={formState.password}
                 // onChange={handleChange}
               ></input>
+              </label>
             </div>
             <button type="submit" className="btn btn-outline-info">
               Login

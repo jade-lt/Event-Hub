@@ -63,10 +63,12 @@ const MarketplaceContainer = () => {
 
   return (
     <div>
+      <div id="header">
       <h1 className="header-text">The Event Marketplace</h1>
-
+      </div>
+      
       <Router>
-        <div>
+        <div className="">
         
           <Link to="/login">
             {/* <button type="button">Login</button> */}
@@ -95,7 +97,7 @@ const MarketplaceContainer = () => {
           </Switch>
         </div>
       </Router>
-    </div>
+      </div>
   );
 
 }

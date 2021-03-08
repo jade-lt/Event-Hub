@@ -106,9 +106,11 @@ const DashboardContainer = () => {
   }, [hireItemsList]);
 
   return (
+    <div id="dashboard-header">
     <Router>
       <div>
-        <h1>Welcome Back!</h1>
+      <h3 id="dashboard-welcome">Welcome back!</h3>
+
         <Link to="/dashboard/listing/add">
         {/* <button type="button">Add a Listing</button> */}
         <Button variant="outline-info" className="mr-2">Add a Listing</Button>
@@ -154,6 +156,7 @@ const DashboardContainer = () => {
         </Switch>
       </div>
     </Router>
+    </div>
   );
 };
 
