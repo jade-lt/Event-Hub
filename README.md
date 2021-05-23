@@ -1,4 +1,4 @@
-# Event-Marketplace
+# Event-Hub
 
 A working CRUD app for event planning/services/hire businesses, to keep track of inventory and current pricing, along with info on their own suppliers/cost to the business for each product. 
 
